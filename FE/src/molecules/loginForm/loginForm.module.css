@@ -1,0 +1,70 @@
+.loginFormBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  
+}
+.passwordContainer {
+  position: relative;
+}
+.eyeIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-text-grey);
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    border: var(--border);
+    border-radius: var(--border-radius-xxs);
+    padding: 30.5px 40px;;
+}
+.loginForm input {
+    width: 268px;
+    height: 38px;
+    border: var(--border);
+    border-radius: var(--border-radius-xs);
+    font-size: 12px;
+}
+.lineBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px 0 70px;
+  }
+  .line {
+    width: 100%;
+    border-bottom: var(--border);
+  }
+  .lineBox p {
+    font-size: 13px;
+    color: var(--color-text-grey);
+    margin: 0 18px;
+  }
+
+   .forgotPasswordLink{
+     justify-self: end;
+     color:var(--color-text-link);
+     font-size: 12px;
+     line-height: 16px;
+   }
+
+   .haveAccountBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 70px;
+    border: var(--border);
+    border-radius: var(--border-radius-xxs);
+   }

@@ -1,0 +1,34 @@
+.sidebar {
+  min-width: 244px;
+  min-height: 100%;
+  border-right: var(--border);
+  padding: 19px 4px;
+}
+
+.sidebar > img {
+  width: 97px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    min-width: 40px;
+  }
+
+  .sidebar > img {
+    display: none;
+  }
+}
+@media (max-width: 568px) {
+  .sidebar {
+    border-right: none;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .sidebar > img {
+    display: none;
+  }
+  ._sidebar_1qu1u_1 {
+    display: none;
+  }
+}

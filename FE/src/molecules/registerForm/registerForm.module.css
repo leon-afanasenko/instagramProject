@@ -1,0 +1,69 @@
+.registerFormBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    border: var(--border);
+    border-radius: var(--border-radius-xxs);
+    padding: 30.5px 40px;
+    ;
+}
+
+.registerForm input {
+    width: 268px;
+    height: 38px;
+    border: var(--border);
+    border-radius: var(--border-radius-xs);
+    font-size: 12px;
+}
+
+.registerForm h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 38px;
+    width: 95%;
+    color: var(--color-text-grey);
+}
+
+.registerForm_p1 {
+    color: var(--color-text-grey);
+    font-size: 11.81px;
+    line-height: 16px;
+    margin: 27px 0 9px;
+    text-align: center;
+}
+.registerForm_p2 {
+    color: var(--color-text-grey);
+    font-size: 12px;
+    line-height: 16px;
+    margin: 9px 0 27px;
+    text-align: center;
+}
+
+.agreementLink {
+    color: var(--color-text-link);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.haveAccountBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 70px;
+    border: var(--border);
+    border-radius: var(--border-radius-xxs);
+   }
+   .errorMessage{
+    color: rgb(190, 55, 55);
+   }

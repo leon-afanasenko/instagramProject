@@ -1,0 +1,144 @@
+.otherProfile {
+  display: flex;
+  padding: 30px 0 0 20px;
+  gap: 95px;
+}
+
+.gradient_border {
+  position: relative;
+  min-width: 168px;
+  height: 168px;
+  border-radius: 50%;
+}
+
+.gradient_border::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: linear-gradient(
+    225deg,
+    #ff00aa,
+    #ff007f,
+    #ff5500,
+    #ffaa00,
+    #ffd000
+  );
+  z-index: 1;
+}
+
+.gradient_border_inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gradient_border_inner img {
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.otherProfile_rightside {
+  display: flex;
+  flex-direction: column;
+  width: 435px;
+}
+
+.otherProfile_rightside_btnBox {
+  display: flex;
+  gap: 20px;
+}
+
+.otherProfile_rightside_btnBox p {
+  font-size: 19.84px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.otherProfile_statistic {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 20px 0;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.otherProfile_statisticCount {
+  font-weight: 600;
+}
+
+.otherProfile_statisticBio {
+  width: 97%;
+  line-height: 18px;
+}
+
+.webLink {
+  display: flex;
+  gap: 5px;
+  color: var(--color-text-link);
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .otherProfile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .otherProfile {
+    margin-bottom: 30px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .otherProfile {
+    margin-right: 20px;
+  }
+
+  .otherProfile_rightside_btnBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .otherProfile_rightside_btnBox button {
+    width: fit-content;
+    height: 36px;
+  }
+
+  .otherProfile_statistic {
+    width: 60%;
+    align-self: center;
+  }
+
+  .otherProfile_statisticBio {
+    width: 60%;
+    align-self: center;
+  }
+  .otherProfile_rightside a {
+    align-self: center;
+  }
+}

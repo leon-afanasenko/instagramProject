@@ -1,0 +1,156 @@
+.postItem {
+  display: flex;
+  flex-direction: column;
+  height: 720px;
+  width: 404px;
+  font-size: 12px;
+  padding-bottom: 40px;
+  border-bottom: var(--border);
+}
+
+.postImage {
+  width: 404px;
+  height: 503px;
+  object-fit: cover;
+  border-radius: 4px;
+  padding-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.avatarContainer {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+.bottomBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.avatar {
+  position: absolute;
+  inset: 0;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.userInfo {
+  display: flex;
+  gap: 6px;
+  margin-left: 6px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.likesCount {
+  margin-left: 4px;
+}
+
+.commentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.commentText {
+  font-size: 12px;
+  color: var(--color-dark-gray);
+}
+
+.likeIcon {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.unliked {
+  color: rgb(236, 234, 234);
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.liked {
+  color: red;
+  stroke: none;
+}
+
+@media (max-width: 1200px) {
+  .postItem {
+    width: 95%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .postImage {
+    max-height: 250px;
+    border-radius: 5px;
+  }
+
+  .avatarContainer {
+    width: 25px;
+    height: 25px;
+  }
+
+  .avatar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .userInfo {
+    align-items: flex-start;
+  }
+
+  .likesCount {
+    font-size: 10px;
+  }
+
+  .commentText {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .postImage {
+    width: 580px;
+    border: radius 5px;
+  }
+
+  .postItem {
+    display: flex;
+    justify-content: center;
+  }
+  .postImage {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 568px) {
+  .postImage {
+    width: 500px;
+  }
+
+  .postItem {
+    display: flex;
+    justify-content: center;
+  }
+  .postImage {
+    max-height: 280px;
+  }
+}

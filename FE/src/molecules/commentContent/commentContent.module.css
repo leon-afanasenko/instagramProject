@@ -1,0 +1,39 @@
+.commentContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.comment {
+    display: flex;
+    gap: 15px;
+}
+
+.commentAvatar {
+    min-width: 30px;
+    max-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.commentActions span {
+    font-size: 12px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commentActions .liked {
+    color: red;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.commentActions .unliked {
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}

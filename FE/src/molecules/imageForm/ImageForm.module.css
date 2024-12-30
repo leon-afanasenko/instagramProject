@@ -1,0 +1,265 @@
+._fileInputContainer_1moq3_27 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+}
+
+.uploadIcon {
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.formContainer {
+  height: 400px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box_fil {
+  margin: 2px auto;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width:40%;
+  height: 100%;
+}
+
+.fileInputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  text-align: center;
+  width:60%;
+  height: 100%;
+}
+
+.uploadLabel {
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+}
+
+.uploadIcon>img{
+  width:100%;
+ height:400px;
+ object-fit:cover;
+ background-color: green;
+
+}
+
+.fileInput {
+  display: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.placeholderImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.textArea {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  border: none;
+}
+
+.uploadingText {
+  font-size: 14px;
+  color: #ff8c00;
+}
+
+.emojiDropdown {
+  position: relative;
+}
+
+.emojiButton {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.emojiList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.emojiItem {
+  font-size: 30px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.emojiItem:hover {
+  border-radius: 4px;
+  transform: scale(1.6);
+}
+
+.submitButton {
+  position: absolute;
+  top: 27px;
+  right: 25px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0095f6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.submitButton:hover {
+  color: #ff8c00;
+}
+
+.textAreaContainer {
+  width: 100%;
+}
+
+.statusMessage {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #e52a00;
+}
+
+.statusMessage.success {
+  color: #4caf50;
+}
+
+
+
+
+.bred{
+  display:flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+
+
+}
+
+@media (max-width: 992px) {
+  .bred {
+    flex-direction: column;
+  }
+  .fileInputContainer {
+    width: 100%;
+  }
+  .box_fil {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .fileInputContainer {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .uploadIcon {
+    width: 120px;
+    height: 120px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: start;
+    padding-left: 5px;
+  }
+  .username {
+    font-size: 14px;
+  }
+  .submitButton {
+    top: 5px;
+    font-size: 14px;
+}
+.textArea {
+  font-size: 12px;
+}
+
+}
+
+@media (max-width: 375px) {
+  .uploadIcon {
+    width: 100px;
+    height: 100px;
+  }
+  .header {
+    flex-direction: column;
+   
+  }
+  .username {
+    font-size: 12px;
+  }
+  .textArea {
+    font-size: 14px;
+  }
+}
+
+
+

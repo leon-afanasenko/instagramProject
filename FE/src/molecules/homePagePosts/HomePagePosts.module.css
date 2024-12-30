@@ -1,0 +1,14 @@
+.postsContainer {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .postsContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+  }
+  

@@ -1,0 +1,73 @@
+.postList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 55px;
+  width: 78vw;
+  margin-right: 40px;
+}
+
+.postList img {
+  width: 100%;
+  height: 312px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1200px) {
+  .postList {
+      padding: 25px;
+      width: 100%;
+  }
+  .postList img{
+      max-height: 290px;
+  }
+}
+@media (max-width: 992px) {
+  .postList {
+      padding-right: 0px;
+  }
+  .postList img{
+      max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .postList {
+      padding: 0px;
+      margin: 0 20px;
+      width: 97%;
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .postList {
+      width: 90%;
+      margin-left: 0;
+  }
+  .postList img{
+      max-height: 130px;
+  }
+}
+
+@media (max-width: 445px) {
+  .postList {
+      width: 85%;
+      margin-left: 0;
+  }
+  .postList img{
+      max-height: 110px;
+  }
+}
+
+@media (max-width: 430px) {
+  .postList {
+      width: 80%;
+      margin-left: 0;
+  }
+  .postList img{
+      max-height: 100px;
+  }
+}

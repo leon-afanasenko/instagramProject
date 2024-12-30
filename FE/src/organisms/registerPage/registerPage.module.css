@@ -1,0 +1,7 @@
+.registerPage{
+    display: flex;
+align-items: start;
+justify-content: center;
+gap: 32px;
+margin-top: 81px;
+}

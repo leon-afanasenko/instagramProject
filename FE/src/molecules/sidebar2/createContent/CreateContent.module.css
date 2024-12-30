@@ -1,0 +1,10 @@
+.createContainer{
+width: 913px;
+height: 564px;
+margin: 0 auto;
+border-radius: 12px;
+}
+.createHeader{
+    width: 100%;
+    height: 43px;
+}

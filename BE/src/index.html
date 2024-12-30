@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Client</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #messages { margin-top: 20px; border: 1px solid #ddd; padding: 10px; height: 200px; overflow-y: scroll; }
+        .message { margin: 5px 0; }
+        .server-message { color: green; }
+        .client-message { color: blue; }
+        #status { margin-bottom: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Socket.IO Client</h1>
+<div id="status">Status: Disconnected</div>
+<div>
+    <input type="text" id="messageInput" placeholder="Type a message" />
+    <button onclick="sendMessage()">Send</button>
+</div>
+<div id="messages"></div>
+
+<!-- Include Socket.IO client library -->
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+<script>
+    const serverUrl = 'ws://localhost:5005';
+    const socket = io(serverUrl);
+
+    const statusEl = document.getElementById('status');
+    const messagesEl = document.getElementById('messages');
+    const messageInput = document.getElementById('messageInput');
+
+    // Handle connection and disconnection
+    socket.on('connect', () => {
+        statusEl.textContent = 'Status: Connected';
+        statusEl.style.color = 'green';
+    });
+
+    socket.on('disconnect', () => {
+        statusEl.textContent = 'Status: Disconnected';
+        statusEl.style.color = 'red';
+    });
+
+    // Handle incoming messages from the server
+    socket.on('message', (msg) => {
+        displayMessage(msg, 'server-message');
+    });
+
+    // Send message to the server
+    function sendMessage() {
+        const message = messageInput.value;
+        if (socket.connected) {
+            socket.emit('message', message); 
+            displayMessage(message, 'client-message'); 
+            messageInput.value = '';
+        } else {
+            alert('Socket.IO is not connected.');
+        }
+    }
+
+    // Display message in the message area
+    function displayMessage(message, className) {
+        const messageEl = document.createElement('div');
+        messageEl.textContent = message;
+        messageEl.className = `message ${className}`;
+        messagesEl.appendChild(messageEl);
+        messagesEl.scrollTop = messagesEl.scrollHeight; 
+    }
+</script>
+
+</body>
+</html>

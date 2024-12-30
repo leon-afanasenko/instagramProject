@@ -1,0 +1,504 @@
+
+.modalOverlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; 
+}
+
+.modalContent {
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  left: 10%;
+  width: 60vw;
+  height: 65vh;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+  z-index: 10000; 
+}
+
+
+.modalContent_leftside {
+  width: 60%;
+  background-color: #f0f0f0;
+}
+
+.modalContent_leftside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.modalContent_rightside {
+  width: 40%;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.modalContent_rightside_caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.gradient_border {
+  position: relative;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.rightBox{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: space-between;
+ 
+}
+.gradient_border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: linear-gradient(225deg, #ff007f, #ff5500, #ffaa00, #ffd000);
+  z-index: -1;
+}
+
+.gradient_border_inner {
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gradient_border_inner img {
+  max-width: 36px;
+  min-width: 36px;
+  max-height: 36px;
+  min-height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.topBlock, .topBlockTop{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.topBlockTop{
+  border-bottom: 0.5px solid #737373;
+  align-items: center;
+}
+
+.user_name {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.nameCaption{
+  display: flex;
+  flex-direction: column;
+}
+.modalCaption {
+  max-width: 90%;
+  height: 100%;
+}
+.notifBox{
+  height: 80px;
+  margin-top: 15px;
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 40px;
+ 
+}
+
+.modalContent_rightside_notifications {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  color: #333;
+  margin-top: 40px;
+  padding: 4px 14px;
+  border-top: 1px solid #737373;
+}
+.modalContent_rightside_notifications span{
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modalContent_rightside_notifications_date{
+  font-size: 12px;
+  color: #737373;
+  padding: 0 14px;
+}
+
+.commentContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.comment{
+  display: flex;
+  gap: 15px;
+}
+.commentsSection {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.avaImg{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.commentAvatar{
+min-width: 30px;
+height: 30px;
+border-radius: 50%;
+}
+
+.commentActions span {
+  font-size: 12px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.commentActions .liked {
+  color: red;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.commentActions .unliked {
+  color: rgb(225, 225, 225);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+
+.addCommentSection {
+  max-height: 45px;
+  padding: 10px 0 ;
+  border-top: 1px solid #737373;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.commentInput {
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+}
+
+.commentInput:focus {
+  border-color: #007aff;
+}
+
+.commentButton {
+  background: transparent;
+  background-color: white;
+  color: #0095F6;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.commentButton:disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+
+.errorText {
+  margin-top: 10px;
+  color: #ff0000;
+  font-size: 12px;
+}
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  color: #ff0000;
+}
+.emojiDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.emojiButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.emojiButton:hover {
+  transform: scale(1.2);
+}
+
+.emojiList {
+  position: absolute;
+  bottom: 40px;
+  left: 0; 
+  width: 300px; 
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; 
+  border-radius: 8px; 
+  overflow-x: auto; 
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.emojiItem {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emojiItem:hover {
+  transform: scale(1.3);
+}
+
+.emojiList::-webkit-scrollbar {
+  height: 5px; 
+}
+
+.emojiList::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); 
+  border-radius: 10px;
+}
+
+.emojiList::-webkit-scrollbar-track {
+  background: transparent;
+}
+.moreOptionsButton{
+  box-shadow: 0 0 5px #FFFFFF;
+  border: none;
+  font-size: 12px;
+  align-items: flex-end;
+  position: absolute;
+  right: 10px;
+  top: 10px; 
+  width: 12px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.actionMenu {
+  position: absolute;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  width: 400px;
+}
+
+.actionButton {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-bottom: 0.1px solid #eaeaea;
+  background: none;
+}
+
+.actionButton:hover {
+  background-color: #f2f2f2;
+}
+
+.deleteButton {
+  color: #ff0000;
+}
+
+.cancelButton {
+  color: #007aff;
+}
+
+.editModal {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.editModalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.editInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.previewImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.editButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background-color: #007ace;
+}
+
+.cancelButton:hover {
+  background-color: #e5e5e5;
+}
+
+.deleteConfirmation {
+  position: absolute;
+  top: 3%;
+  left: 30%;
+  color: red;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #737373;
+  border-radius: 12px;
+}
+.cancelDeleteButton, .confirmDeleteButton{
+  background-color: white;
+  border: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.delButtons{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.confirmDeleteButton:hover{
+  color: red;
+  transform: scale(1.2);
+}
+.cancelDeleteButton:hover{
+  color: red;
+  transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+  .editModal{
+    width: 100%;
+    left: 0;
+  }
+  .modalContent{
+    flex-direction: column;
+    height: 80vh;
+   left: auto;
+  }
+  .modalContent_leftside{
+    width: 100%;
+    height: 40%;
+  }
+  .modalContent_rightside{
+    width: 100%;
+  }
+}

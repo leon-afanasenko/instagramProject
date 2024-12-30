@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet');
+
+:root {
+  --color-main: #ffffff;
+
+  --color-bg-dark-grey: #efefef;
+  --color-bg-light-grey: #fafafa;
+  --color-bg-ultraviolet: #4d00ff;
+
+  --color-text-dark: #000000;
+  --color-text-grey: #737373;
+  --color-text-white: #ffffff;
+  --color-text-blue: #0095f6;
+  --color-text-link: #00376b;
+  --color-text-error: #ff0014;
+  --color-text-delete: #ed4956;
+
+  --color-button-blue: #0095f6;
+  --color-button-grey: #efefef;
+
+  --color-line: #dbdbdb;
+
+  --color-modal: #000000c0;
+
+  --border-radius-xxs: 1px;
+  --border-radius-xs: 3px;
+  --border-radius-s: 8px;
+  --border-radius-m: 12px;
+  --border-radius-l: 15px;
+  --border-radius-xl: 20px;
+
+  --border: 1px solid var(--color-line);
+  --border-none: none;
+
+  --box-shadow: 4px 0px 24px 0 #00000026;
+
+  --container-width: 100%;
+  --container-padding-x: 20px;
+
+  --transition-duration: all 0.2s;
+}
+
+/* Global Styles --------------------------------------------------- */
+
+.globalContainer {
+  /* Ширина контейнара 1440px */
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  /* Центрирование контейнера */
+  margin-inline: auto;
+  /* 15px зона безопасности с обеих сторон */
+  padding-inline: var(--container-padding-x);
+  /* background-color: rgb(193, 251, 193); */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+
+  font-weight: 400;
+  line-height: 1.1;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body,
+.app.light {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+.app.dark {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h6 {
+  font-size: 11.86px;
+  line-height: 15.25px;
+}
+
+a,
+Link,
+button,
+input,
+textarea,
+svg * {
+  transition: var(--transition-duration);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+select,
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+:where(ul[class]) {
+  list-style: none;
+}
+
+p {
+  margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+
+  line-height: 1.5;
+}
+
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+svg * {
+  transition-property: fill, stroke;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

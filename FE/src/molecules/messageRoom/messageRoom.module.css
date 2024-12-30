@@ -1,0 +1,212 @@
+.messageRoom {
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipientInfo {
+  width: 100%;
+  min-height: 75px;
+  border-bottom: var(--border);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.profileImage {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: var(--border);
+}
+
+.recipientInfo_inside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.profileImage_inside {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: var(--border);
+}
+
+.recipientInfo_inside p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-text-grey);
+}
+
+.recipientInfo_inside button {
+  width: 173px;
+  height: 32px;
+}
+
+.lastMessageDate {
+  padding-bottom: 38px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 100px 30px 0;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.list_item_my {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: 30%;
+  margin-right: 0;
+}
+
+.list_item_their {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-right: 30%;
+}
+
+.message_text {
+  font-weight: 400;
+  line-height: 15.5px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 12.06px;
+}
+
+.message_wrapper {
+  padding: 12px 16px;
+  border-radius: var(--border-radius-l);
+}
+
+.list_item_my .message_text {
+  color: var(--color-text-white);
+}
+.list_item_my .message_wrapper {
+  background-color: var(--color-bg-ultraviolet);
+}
+
+.list_item_their .message_text {
+  color: var(--color-text-dark);
+}
+.list_item_their .message_wrapper {
+  background-color: var(--color-bg-dark-grey);
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: var(--border);
+}
+
+.avatar_their {
+  margin-right: 10px;
+}
+
+.avatar_my {
+  margin-left: 10px;
+}
+
+.form {
+  display: flex;
+  padding-top: 40px;
+  position: relative;
+}
+
+.form > textarea {
+  border: var(--border);
+  border-radius: var(--border-radius-xl);
+  padding: 12px 40px 10px 12px;
+  color: var(--color-text-grey);
+  min-width: 45vw;
+}
+
+.form textarea::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.form button {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 1400px) {
+  .messageRoom {
+    width: 50vw;
+  }
+
+  .recipientInfo {
+    min-height: 50px;
+  }
+
+  .list {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .messageRoom {
+    width: 72vw;
+  }
+
+  .form textarea {
+    min-width: 50vw;
+  }
+}
+
+@media (max-width: 568px) {
+  .recipientInfo_inside p {
+    display: none;
+  }
+
+  .messageRoom {
+    width: 70vw;
+  }
+
+  .list {
+    flex-direction: column;
+    row-gap: 16px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+
+  .recipientInfo {
+    display: none;
+  }
+  .form textarea {
+    min-width: 45vw;
+  }
+  .list_item_my {
+    margin-left: 20%;
+  }
+  .list_item_their {
+    margin-right: 20%;
+  }
+}

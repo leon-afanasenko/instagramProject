@@ -1,0 +1,20 @@
+  .input {
+    border: none;
+    outline: none;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    color: #888;
+  }
+  
+  .error {
+    border-color: #dc3545;
+  }
+  
+  .errorMessage {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  

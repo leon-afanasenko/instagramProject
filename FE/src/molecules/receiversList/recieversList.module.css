@@ -1,0 +1,131 @@
+.recieversList {
+  width: 397px;
+  height: 85vh;
+  border-right: var(--border);
+  padding: 34px 0;
+}
+
+.recieversList h4 {
+  margin-left: 20px;
+}
+
+.recieversList_userBox {
+  display: flex;
+  gap: 7.5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recieversList_userBox:hover {
+  background-color: var(--color-bg-light-grey);
+}
+
+.recieversList_userBox.active {
+  background-color: var(--color-bg-dark-grey);
+}
+
+.userBox_img {
+  border-radius: 50%;
+  min-width: 56px;
+  max-width: 56px;
+  height: 56px;
+  border: var(--border);
+  object-fit: cover;
+}
+
+.userBox_data {
+  display: flex;
+  flex-direction: column;
+  gap: 6.5px;
+  padding: 2px 0;
+}
+
+.userBox_dataP1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.userBox_dataP2 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-text-grey);
+}
+
+@media (max-width: 1400px) {
+  .recieversList {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .recieversList {
+    max-width: 240px;
+  }
+}
+@media (max-width: 992px) {
+  .recieversList {
+    max-width: 130px;
+  }
+  .userBox_dataP2 {
+    width: 90%;
+    font-size: 10px;
+  }
+  .recieversList_userBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .userBox_dataP2 {
+    display: none;
+  }
+}
+@media (max-width: 568px) {
+  .recieversList {
+    width: 150px;
+  }
+  .userBox_dataP1 {
+    padding-left: 8px;
+  }
+  .userBox_dataP2 {
+    display: none;
+  }
+
+  .userBox_img {
+    border-radius: 50%;
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    border: var(--border);
+    object-fit: cover;
+  }
+
+  .recieversList h4 {
+    display: none;
+  }
+
+  .recieversList_userBox {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .recieversList {
+    width: 80px;
+  }
+
+  .userBox_dataP1 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+}
+@media (max-width: 420px) {
+}

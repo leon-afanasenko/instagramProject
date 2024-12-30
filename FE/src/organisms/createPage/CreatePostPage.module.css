@@ -1,0 +1,14 @@
+.createPostPage{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-size: 19px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+h1{
+    font-size: 16px;
+  }
+}
